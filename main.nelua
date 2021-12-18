@@ -1,0 +1,16 @@
+require 'C.stdio'
+require 'C.stdlib'
+require 'io'
+
+print("Welcome to djsdoodle's program runner.")
+print("This software was meant to run minecraft server software everytime it crashed")
+print("Its a little over kill but it does the job.")
+print("Note: This software will not stop unless you force kill it.")
+print("Stopping this software will not kill the command you chose to run as well.")
+C.printf("Please type the command you would like to run: ")
+
+local command = tostring(io.read())
+
+while true do
+C.system(command)
+end
